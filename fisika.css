@@ -1,0 +1,48 @@
+.navbar {
+    background-color: white;
+}
+.navbar-brand {
+    font-family: Secular One;
+    color: #1954C7;
+}
+.system {
+    background-color: white;
+}
+span {
+    color: black;
+}
+li {
+    color: black;
+}
+header {
+    background-color: #7091F5;
+}
+.btn {
+    background-color:  #7091F5;
+    outline: none;
+}
+.header {
+    background-color:  #7091F5;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+ul li h3 {
+    text-align: justify;
+    font-family: arial;
+}
+img {
+    size: 10px;
+}
+ul li {
+    color: whitesmoke;
+}
+ul li h4 {
+    color: black;
+    font-weight: 500;
+}
+.image {
+    width: 100px;
+}
+a {
+    color: black;
+}

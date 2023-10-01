@@ -1,89 +1,290 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>PROJECT C FISIKA XI-10</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="fisika.css">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Secular+One:wght@400&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;display=swap"
+      data-tag="font"
+    />
+    </head>
+    <body class="d-flex flex-column h-100">
+        <main class="flex-shrink-0">
+            <!-- Navigation-->
+                <nav class="navbar navbar-expand-lg ">
+                    <div class="container px-5">
+                        <a class="navbar-brand" href="index.html">PROJECT C</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                                <li class="nav-item"><a class="nav-link" href="#newton">Hukum Newton</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#gaya">Jenis-Jenis Gaya</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#momentum">Momentum & Impuls</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#gm">Gerak Melingkar</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            <!-- Header-->
+            <header class="py-5">
+                <div class="container px-5">
+                    <div class="row gx-5 align-items-center justify-content-center">
+                        <div class="col-lg-8 col-xl-7 col-xxl-6">
+                            <div class="my-5 text-center text-xl-start">
+                                <h1 class="display-5 fw-bolder text-white mb-2">WELCOME TO PROJECT C DYNAMIC OF PARTICLE MOTIONS</h1>
+                                <p class="lead fw-normal text-white-50 mb-4">Dinamika partikel merupakan salah satu cabang ilmu fisika yang mempelajari gerak suatu partikel. Gerak suatu partikel dipengaruhi oleh gaya yang bekerja padanya. Dengan memahami dinamika partikel, kita dapat menjelaskan berbagai fenomena gerak di dunia nyata, seperti gerakan bola, gerakan roket, dan gerakan planet.
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/10.4.0/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/10.4.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+                                    Dalam makalah ini, akan dibahas mengenai konsep-konsep dasar dinamika partikel, termasuk hukum gerak Newton, gaya, dan momentum. Selain itu, akan dibahas pula beberapa contoh penerapan dinamika partikel dalam kehidupan sehari-hari.
+                                    
+                                    Semoga makalah ini dapat bermanfaat bagi pembaca.</p>
+                                <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                                    <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#features">LEARN MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="" /></div>
+                    </div>
+                </div>
+            </header>
+            <!-- Features section-->
+            <section class="py-5" id="features">
+                <div class="container px-5 my-5">
+                    <h1>Apa sih Dinamika itu</h1>
+                    <br><br><br>
+                    <div class="row gx-5">
+                        <!--<div class="col-lg-4 mb-5 mb-lg-0"><h2 class="fw-bolder mb-0">A better way to start building.</h2></div>-->
+                        <div class="col-lg-12">
+                            <div class="row gx-5 row-cols-1 row-cols-md-2">
+                                <div class="col mb-5 h-100">
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-collection"></i></div>
+                                    <h2 class="h5">Pengertian</h2>
+                                    <p class="mb-0">Dinamika sendiri adalah ilmu yang mempelajari gerak suatu benda dengan meninjau penyebabnya.</p>
+                                </div>
+                                <div class="col mb-5 h-100">
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-building"></i></div>
+                                    <h2 class="h5">Pentingnya Dinamika</h2>
+                                    <p class="mb-0">Dinamika menjadi materi yang cukup penting untuk dipelajari. Karena dengan mempelajari dinamika kita bisa tahu penyebab benda bergerak?</p>
+                                </div>
+                                <div class="col mb-5 mb-md-0 h-100">
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
+                                    <h2 class="h5">Kaitan Erat</h2>
+                                    <p class="mb-0">Dinamika sendiri tentu juga erat berikatan dengan materi Kinematika. Jadi pastikan kalian tidak lupa materi KInematika ya :)</p>
+                                </div>
+                                <div class="col h-100">
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
+                                    <h2 class="h5">Hubungan Dinamika dan Kinematika</h2>
+                                    <p class="mb-0">Untuk hubungan Dinamika dan Kinematika sendiri, ada di bagian menentukan kecepatan akhir setelah didorong, dsb.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="header" id="page">
+                <div class="container px-5 my-5">
+                    <h1 class="display-5 fw-bolder text-white mb-2">Explore The Fundamental Concepts Of Particle Dynamics</h1>
+                    <br><br><br>
+                    <div class="row gx-5">
+                        <!--<div class="col-lg-4 mb-5 mb-lg-0"><h2 class="fw-bolder mb-0">A better way to start building.</h2></div>-->
+                        <div class="col-lg-12">
+                            <div class="row gx-5 row-cols-1 row-cols-md-2">
+                                <div class="col mb-5 h-100">
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-collection"></i></div>
+                                    <h2 class="h5">Newton's Laws Of Motion</h2>
+                                    <p class="mb-0">Gain a comprehensive of Newton's three laws that serve as the cornerstone of classical mechanics</p>
+                                </div>
+                                <div class="col mb-5 h-100">
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-building"></i></div>
+                                    <h2 class="h5">Type Of Forces</h2>
+                                    <p class="mb-0">Discover the diverse range of forces that excert influence on the motion of particles</p>
+                                </div>
+                                <div class="col mb-5 mb-md-0 h-100">
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
+                                    <h2 class="h5">Momentum and Impulse</h2>
+                                    <p class="mb-0">Immerse yourself in the concepts of Momentum and Impulse and their pivotal role in particle dynamics</p>
+                                </div>
+                                <div class="col h-100">
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
+                                    <h2 class="h5">Circular Motion</h2>
+                                    <p class="mb-0">Unveil the underlying principles governing the captivating motion of particles</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <br><br><br>
+            <header class="py-5" id="newton">
+                <div class="container px-5">
+                    <div class="row gx-5 align-items-center justify-content-center">
+                        <div class="col-lg-8 col-xl-7 col-xxl-6">
+                            <div class="my-5 text-ailgn-left text-xl-start">
+                                <h1 class="display-5 fw-bolder text-white mb-2">Newton's Laws Of Motions</h1>
+                                <p class="lead fw-normal text-white-50 mb-4">
+                                    <ul>
+                                        <li>
+                                            <h2>Hukum Newton I</h2>
+                                            <h3>Hukum Newton I berbunyi : Suatu benda akan tetap pada keadaan awalnya (diam atau bergerak GLB) jika resultan gaya yang bekerja padanya bernilai sama dengan nol</h3>
+                                            <h1><img src="hukum 1.svg"></h1>
+                                        </li>
+                                        <li>
+                                            <h2>Hukum Newton II</h2>
+                                            <h3>Hukum Newton II berbunyi : Percepatan yang dihasilkan oleh resultan gaya yang bekerja pada suatu benda sebanding dengan resultan gayanya dan berbanding terbalik dengan massa bendanya</h3>
+                                            <h1><img src="hukum 2.svg"></h1>
+                                        </li>
+                                        <li>
+                                            <h2>Hukum Newton III</h2>
+                                            <h3>Hukum Newton III berbunyi : Jika benda A mengerjakan gaya pada benda B, benda B akan mengerjakan gaya pada benda A yang besarnya sama, tapi arahnya berlawanan</h3>
+                                            <h1><img src="hukum 3.svg"></h1>
+                                        </li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class=""/></div>
+                    </div>
+                </div>
+            </header>
+            <br>
+            <section class="py-5" id="gaya">
+                <div class="container px-5 my-5">
+                    <h1>Jenis Jenis Gaya</h1>
+                    <br><br><br>
+                    <div class="row gx-5">
+                        <!--<div class="col-lg-4 mb-5 mb-lg-0"><h2 class="fw-bolder mb-0">A better way to start building.</h2></div>-->
+                        <div class="col-lg-12">
+                            <div class="row gx-5 row-cols-1 row-cols-md-2">
+                                <div class="col mb-5 h-100">
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-collection"></i></div>
+                                    <h2 class="h5">Gaya Berat</h2>
+                                    <p class="mb-0">Gaya yang timbul akibat adanya gravitasi dari suatu planet dan arahnya menuju pusat gravitasi</p>
+                                    <img src="berat.svg">
+                                </div>
+                                <div class="col mb-5 h-100">
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-building"></i></div>
+                                    <h2 class="h5">Gaya Normal</h2>
+                                    <p class="mb-0">Gaya yang bekerja pada benda akibat sentuhan antara permukaan benda dengan suatu permukaan tegak lurus. Driumuskan dengan N</p>
+                                </div>
+                                <div class="col mb-5 mb-md-0 h-100">
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
+                                    <h2 class="h5">Gaya Gesek</h2>
+                                    <p class="mb-0">Gaya yang timbul akibat adanya gesekan terhadap benda oleh permukaan alas saat benda bergerak. Koefisien gesek bisa statis maupun kinetis</p>
+                                    <img src="gesek.svg">
+                                </div>
+                                <div class="col h-100">
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
+                                    <h2 class="h5">Gaya Sentripetal</h2>
+                                    <p class="mb-0">Gaya yang terjadi pada benda yang bergerak melingkar. Arah percepatan menuju pusat lingkaran dan tegak lurus dengan vektor kecepatan</p>
+                                    <p class="mb-0">Fsentripetal = mv2/r</p>
+                                    <p class="mb-0">Fsentripetal = mw2r</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <br>
+            <header class="py-5" id="momentum">
+                <div class="container px-5">
+                    <div class="row gx-5 align-items-center justify-content-center">
+                        <div class="col-lg-8 col-xl-7 col-xxl-6">
+                            <div class="my-5 text-ailgn-left text-xl-start">
+                                <h1 class="display-5 fw-bolder text-white mb-2">Momentum And Impulse</h1>
+                                <p class="lead fw-normal text-white-50 mb-4">
+                                    <ul>
+                                        <li>
+                                            <h2>Momentum</h2>
+                                            <h3>Momentum adalah jumlah gerak yang besarnya berbanding lurus dengan massa dan kecepatan benda (p = momentum, m = massa, v = kecepatan)</h3>
+                                            <h4>p = m.v</h4>
+                                        </li>
+                                        <li>
+                                            <h2>Impulse</h2>
+                                            <h3>Impuls adalah hasil kali antara gaya dan selang watu gaya itu bekerja pada benda. Impuls sama dengan perubahan Momentum (I = Impuls, F = gaya, t = waktu sekon)</h3>
+                                            <h4>I = F.t = Δp</h4>
+                                        </li>
+                                        <li>
+                                            <h2>Tumbukan</h2>
+                                            <h3>Tumbukan ada tiga jenis yang pertama</h3>
+                                            <ul>
+                                                <h4><li>Tumbukan Lenting Sempurna (e =1)</li></h4>
+                                                <h4><li>Tumbukan Lenting Sebagian (0 < e < 1)</li></h4>
+                                                <h4><li>Tumbukan Tidak Lenting (e = 0)</li></h4>
+                                                <h4><li>Tumbukan Dengan Lantai (e = √h2/h1)</li></h4>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="" /></div>
+                    </div>
+                </div>
+            </header>
+            <br><br>
+            <header class="py-5" id="gm">
+                <div class="container px-5">
+                    <div class="row gx-5 align-items-center justify-content-center">
+                        <div class="col-lg-8 col-xl-7 col-xxl-6">
+                            <div class="my-5 text-ailgn-left text-xl-start">
+                                <h1 class="display-5 fw-bolder text-white mb-2">Gerak Rotasi</h1>
+                                <p class="lead fw-normal text-white-50 mb-4">
+                                    <ul>
+                                        <li>
+                                            <h2>Torsi atau Momen Gaya</h2>
+                                            <h3>Torsi adalah gaya yang bekerja pada sebuah benda dengan jarak tertentu terhadap titik pusat pada benda tersebut.</h3>
+                                            <h4>τ = r × F × sin θ</h4>
+                                        </li>
+                                        <li>
+                                            <h2>Momen Inersia benda partikel</h2>
+                                            <h3>Momen Inersia adalah ukuran kelembaman benda dalam gerak melingkar.</h3>
+                                            <h4>I = m.r2</h4>
+                                        </li>
+                                        <li>
+                                            <h2>Momen Inersia Benda Tegar</h2>
+                                            <h3>Untuk Rumus Lengkapnya bisa dilihat berikut ini</h3>
+                                            <a href="https://asset.kompas.com/crops/KdWPLU0sH9hvmazdMmwm4cEktxI=/0x16:602x417/750x500/data/photo/2022/04/20/625f9ccf8d7fe.png">RUMUS LENGKAPNYA</a>
+                                        </li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                                           </div>
+                </div>
+            </header>
+            <br><br>    
+        </main>
+        <!-- Footer-->
+        <footer class="bg-dark py-4 mt-auto">
+            <div class="container px-5">
+                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                    <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; Your Website 2023</div></div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
 </html>
